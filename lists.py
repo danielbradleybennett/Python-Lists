@@ -12,6 +12,12 @@ for number in numbers_1_to_10:
     the_numbers_match = False
 
     # Iterate your random number list here
+    for i in my_randoms:
+        if i == number:
+            the_numbers_match = True
+
+    if the_numbers_match == True:
+        print(f'the list contains {number}')
 
     # Does my_randoms contain number? Change the boolean.
 
