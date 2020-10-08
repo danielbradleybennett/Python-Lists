@@ -22,3 +22,16 @@ for number in numbers_1_to_10:
     # Does my_randoms contain number? Change the boolean.
 
     print(f'{number} is in the random list')
+
+
+planets_list = ["Mercury", "Mars"]
+second_planet = planets_list[1]
+
+planets_list.append("Jupiter")
+planets_list.append("Saturn")
+
+planets_list.extend(["Uranus", "Neptune"])
+
+planets_list.insert(1, "Earth")
+
+print(planets_list)
