@@ -33,5 +33,43 @@ planets_list.append("Saturn")
 planets_list.extend(["Uranus", "Neptune"])
 
 planets_list.insert(1, "Earth")
+planets_list.insert(2, "Venus")
+
+planets_list.append("Pluto")
 
 print(planets_list)
+
+rocky_planets = list()
+rocky_planets = planets_list[0:5]
+
+print(rocky_planets)
+
+del planets_list[8]
+
+print(planets_list)
+
+spacecraft = [
+    ("Nemesis", "Mars"),
+    ("Leviathan", "Earth"),
+    ("Jacob's Ladder", "Venus"),
+    ("Columbus", "Jupiter"),
+    ("Terra", "Saturn"),
+    ("Exodus", "Neptune"),
+
+]
+
+for planet in planets_list:
+    visited = False
+    vis = f'{planet} was visited by '
+    for tuple in spacecraft:
+        if tuple[1] == planet:
+            vis += f'{tuple[0]}'
+            visited = True
+
+    else:
+        vis = vis[slice(-2)] + f'.'
+
+    if visited:
+        print(vis)
+    else:
+        print(f'Nobody visiting {planet}.')
